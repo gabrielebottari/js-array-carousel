@@ -63,12 +63,14 @@ next.addEventListener ('click', function() {
 
     item[counter].classList.remove('active');
 
-    if ( counter == imgArray.length-1 ) {
-        counter = 0;
+    if ( counter != imgArray.length -1 ){
+        counter ++;
+
     }
-    else {
-        counter++;
-    };
+    else{
+        counter = 0;  
+
+    }
 
     item[counter].classList.add('active');
 
@@ -80,12 +82,12 @@ previous.addEventListener ('click', function() {
 
     item[counter].classList.remove('active');
 
-    if ( counter == 0 ) {
-        counter = imgArray.length - 1;
+    if ( counter != 0){
+        counter --;
     }
-    else {
-        counter--;
-    };
+    else{
+        counter = imgArray.length-1;
+    }
 
     item[counter].classList.add('active');
 
@@ -96,7 +98,9 @@ previous.addEventListener ('click', function() {
 function showImage(index) {
 
     item[counter].classList.remove('active');
+
     counter = index;
+    
     item[counter].classList.add('active');
 
 }
