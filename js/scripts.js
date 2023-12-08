@@ -17,15 +17,6 @@ const imgArray = [
     '05.webp',
 ];
 
-// Creazione array bottoni
-const btnArray = [
-    '01.webp',
-    '02.webp',
-    '03.webp',
-    '04.webp',
-    '05.webp',
-];
-
 // inizializzo variabile per rappresentare il contenuto del carosello
 let itemContent = '';
 let itemThumbnail = '';
