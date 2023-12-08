@@ -16,10 +16,10 @@ html {
 */
 
 .container {
-    height: 100vh;
-    display: flex;
+    height: 85vh;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .slider {
@@ -29,15 +29,15 @@ html {
 
 .item-slider {
     height: 100%;
-    padding: 20px;
 }
 
 .item {
     height: 100%;
     display: none;
+    padding: 150px 50px;
 }
 
-.item img {
+.item img, .itemthumbnail img {
    width: 100%;
    height: 100%;
    object-fit: contain; 
@@ -47,3 +47,20 @@ html {
     display: block;
 }
 
+.thumbnail-container {
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.thumbnail-container button {
+    padding: 5px;
+    margin: 10px;
+    background-color: #212529;
+    border: none;
+  }
+  
+  .thumbnail-container button img {
+    max-height: 100px;
+  }
