@@ -25,7 +25,7 @@ let itemThumbnail = '';
 // creo anche un button con una immagine dentro
 for (let i = 0; i < imgArray.length; i++) {
     itemContent += `<div class="item"><img src="./img/${imgArray[i]}" alt="Image ${i+1}"></div>`; 
-    itemThumbnail += `<button type="button" onclick="showImage(${i})"><img src="./img/${imgArray[i]}" alt="Image ${i+1}"></button>`; 
+    itemThumbnail += `<button type="button"><img src="./img/${imgArray[i]}" alt="Image ${i+1}"></button>`; 
 };
 
 // inserisco nell'html il codice js creato con il ciclo for
@@ -84,21 +84,8 @@ previous.addEventListener ('click', function() {
 
 });
 
-/*
-// terza funzione per i bottoni rimuovo la classe active e lo assegno alla stessa immagine che corrisponde
-//  all'indice del bottone corrispondente in seguito darò a quell'imagine classe active
-
-function showImage(index) {
-
-    item[counter].classList.remove('active');
-
-    counter = index;
-    
-    item[counter].classList.add('active');
-
-}
-*/
-
+// secondo ciclo for per ogni thumbnail cliccatta toglierà la classe active al counter corrente dopo metterà counter allo stesso indice del thumbnail
+// e dopodichè a quel counter metterà la classe active.
 for (let i = 0; i < item.length; i++) {
     thumbnails[i].addEventListener('click', function() {
 
@@ -109,5 +96,5 @@ for (let i = 0; i < item.length; i++) {
       item[counter].classList.add('active');
 
     });
-    
-  }
+
+};
