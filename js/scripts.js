@@ -84,8 +84,10 @@ previous.addEventListener ('click', function() {
 
 });
 
+/*
 // terza funzione per i bottoni rimuovo la classe active e lo assegno alla stessa immagine che corrisponde
 //  all'indice del bottone corrispondente in seguito darò a quell'imagine classe active
+
 function showImage(index) {
 
     item[counter].classList.remove('active');
@@ -95,3 +97,17 @@ function showImage(index) {
     item[counter].classList.add('active');
 
 }
+*/
+
+for (let i = 0; i < item.length; i++) {
+    thumbnails[i].addEventListener('click', function() {
+
+      item[counter].classList.remove('active');
+
+      counter = i;
+
+      item[counter].classList.add('active');
+
+    });
+    
+  }
