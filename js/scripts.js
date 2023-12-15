@@ -8,6 +8,14 @@ MILESTONE 3
 Al click dell'utente sulle frecce, il programma cambierà l'immagine attiva, che quindi verrà visualizzata al posto della precedente.
 */
 
+/*
+Riprendete l'esercizio del carosello e aggiungete la funzionalità di autoplay:
+Quando si carica la pagina, le slide iniziano a scorrere da sole ogni 3 secondi
+BONUS
+Aggiungere il "ciclo infinito" sul carosello (cioè dall'ultima slide passo alla prima e viceversa)
+Aggiungere un pulsante per fermare l'avanzamento automatico
+*/
+
 // Creazione array immagini
 const imgArray = [
     '01.webp',
@@ -98,3 +106,25 @@ for (let i = 0; i < item.length; i++) {
     });
 
 };
+
+// funzione per far cambiare immagine
+function nextImage() {
+    item[counter].classList.remove('active');
+
+    if (counter !== imgArray.length - 1) {
+        counter++;
+    } else {
+        counter = 0;
+    }
+
+    item[counter].classList.add('active');
+}
+
+startAutoplay()
+
+// funzione per avviare l'autoplay
+function startAutoplay() {
+
+    // intervallo impostato
+    autoplayInterval = setInterval(nextImage, 3000);
+}
