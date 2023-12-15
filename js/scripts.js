@@ -107,7 +107,7 @@ for (let i = 0; i < item.length; i++) {
 
 };
 
-// funzione per far cambiare immagine
+//funzione per far scorre le immagini si comporta come il ciclo for sopra
 function nextImage() {
     item[counter].classList.remove('active');
 
@@ -120,11 +120,15 @@ function nextImage() {
     item[counter].classList.add('active');
 }
 
-startAutoplay()
-
-// funzione per avviare l'autoplay
+//funzione per far andare in base all'intervello di tempo scelto l'immagine successiva come sritto nella funzione sopra
 function startAutoplay() {
-
-    // intervallo impostato
     autoplayInterval = setInterval(nextImage, 3000);
 }
+
+//funzione per far fermare l'autoplay al clic sul bottone predisposto
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+//avvia l'autoplay quando la pagina è caricata
+window.addEventListener('load', startAutoplay);
